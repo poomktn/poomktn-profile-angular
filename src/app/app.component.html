@@ -1,0 +1,92 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="App">
+  <div class="flex justify-center">
+    <img width="300" height="300" src="assets/images/Edvisory.png" alt="" />
+    <div class="ml-2">
+      <Box color="orange">
+        <div class="mb-1"><b>Tel:</b> 082-322-7582</div>
+        <div class="flex">
+          <b>Email:</b>&nbsp;kuntanut.s@gmail.com&nbsp;
+          <div class="relative no-print cursor-default">
+            <div class="bg-black txt-white border-black text-center" style="width: 20px" (mouseover)="setTooltip(true)"
+              (mouseout)="setTooltip(false)">?</div>
+            <div [hidden]="!mailTooltip" class="tooltip pa-1 bg-black txt-white border-black">
+              Email are difference from name because I try my name as email but
+              got invalid, so I decide to change vowels of my name
+            </div>
+          </div>
+        </div>
+        <div>
+          <b>Github:</b>&nbsp;<a href="https://github.com/poomktn">https://github.com/poomktn</a>
+        </div>
+      </Box>
+      <Box color="black" class="my-2 text-center">
+        <h2>Mr. Kantanat Siripipatworakun</h2>
+      </Box>
+      <Box color="blue" title="Interest">
+        <div id="interest" class="flex">
+          <div>
+            <li>Front-end Development</li>
+            <li>Astrology</li>
+            <li>Airsoft</li>
+          </div>
+          <div>
+            <li>Tarot card</li>
+            <li>Gaming</li>
+          </div>
+        </div>
+      </Box>
+    </div>
+  </div>
+  <Box color="gold" class="mt-2" title="Introduce Myself">
+    <div class="pa-2">
+      A front-end developer who seeks motivation from objective, experience and
+      knowledge.
+    </div>
+  </Box>
+  <Box color="green" class="mt-2" title="Main Skills">
+    <div id="skill">
+      <div>
+        <li *ngFor="let txt of skill" class="mb-1">
+          {{ txt }}
+        </li>
+      </div>
+    </div>
+  </Box>
+  <Box color="orange" class="mt-2" title="Experiences">
+    <div id="experience">
+      <div *ngFor="let item of exp">
+        <li class="txt-orange">{{ item["li"] }}</li>
+        <div class="py-1 ml-5">{{ item["txt"] }}.</div>
+      </div>
+    </div>
+  </Box>
+  <Box color="violet" class="mt-2" title="Education">
+    <p class="text-center">
+      Chulalongkorn University, Bangkok, Thailand
+      <br />
+      Between 2016 – 2020
+      <br />
+      Bachelor Engineer in Computer Engineering
+    </p>
+  </Box>
+  <div class="flex justify-center no-print mt-1">
+    <button (click)="print()">print as PDF file</button>
+  </div>
+</div>
+
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+
+<router-outlet />
